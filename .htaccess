@@ -1,0 +1,30 @@
+<filesMatch "\.(html|htm|js|css)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</filesMatch>
+
+RewriteEngine On
+RewriteRule ^api/config - [F]
+RewriteRule ^api/class - [F]
+RewriteRule ^api/log - [F]
+
+
+
+RewriteRule ^api/v1/login/ api/functions/function_login.php?acao=login [L]
+RewriteRule ^api/v1/logout/ api/functions/function_login.php?acao=logout [L]
+RewriteRule ^api/v1/verificaLogin/ api/functions/function_login.php?acao=verificaLogin [L]
+
+
+
+RewriteRule ^api/v1/servidores(/([0-9\-]+))?/?$ api/functions/function_servidores.php?ponto=$2 [L]
+RewriteRule ^api/v1/agenda(/([0-9\-]+))?/?$ api/functions/function_agenda.php?id=$2 [L]
+RewriteRule ^api/v1/emendas(/([0-9\-]+))?/?$ api/functions/function_emenda.php?id=$2 [L]
+RewriteRule ^api/v1/pessoas(/([0-9\-]+))?/?$ api/functions/function_pessoa.php?id=$2 [L]
+RewriteRule ^api/v1/clipping(/([0-9\-]+))?/?$ api/functions/function_clipping.php?id=$2 [L]
+
+
