@@ -29,8 +29,8 @@ GET /api/v1/pessoas/{id}/<br>
 PUT /api/v1/pessoas/{id}/<br>
 DELETE /api/v1/pessoas/{id}/<br>
 <br>
-POST /api/v1/clipping/<br>
-GET /api/v1/clipping/<br>
-GET /api/v1/clipping/{id}/<br>
-PUT /api/v1/clipping/{id}/<br>
-DELETE /api/v1/clipping/{id}/ <br>  
+POST /api/v1/servidores/<br>
+GET /api/v1/servidores/<br>
+GET /api/v1/servidores/{id}/<br>
+PUT /api/v1/servidores/{id}/<br>
+DELETE /api/v1/servidores/{id}/ <br>  
