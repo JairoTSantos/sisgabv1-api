@@ -16,3 +16,6 @@ contem os logs de erros do DB e de login
 
 pasta config:
 contem as configurações do app e do banco
+
+.htaccess
+todas as urls amigaveis
